@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web 标准规范</title>
+    <link rel="stylesheet" href="src/g.css">
+    <style>
+        header {
+            margin: 0 auto;
+        }
+        main {
+            padding: 15px;
+        }
+        h1 {
+            margin: 0 auto;
+            text-align: center;
+            color: #3c3c3c;
+        }
+        ul {
+            overflow: auto;
+        }
+        li {
+            height: 40px;
+        }
+        li a {
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web 标准规范</h1>
+    </header>
+    <main>
+        <section>
+            <h2>W3C 官方规范</h2>
+            <ul class="standar">
+            </ul>
+        </section>
+        <section>
+            <h2>W3C 规范中文版及规范相关</h2>
+            <ul class="standar-zh">
+            </ul>
+        </section>
+    </main>
+    <script>
+        window.onload = function () {
+            // 英文
+            var standard = [
+                {
+                    name:"HTML5",
+                    uri:"http://www.w3.org/TR/html5/single-page.html",
+                    category:"markup"
+                },
+                {
+                    name:"HTML 5.1",
+                    uri:"http://www.w3.org/TR/html51/single-page.html",
+                    category:"markup"
+                },
+                {
+                    name:"CSS Style Attributes",
+                    uri:"http://www.w3.org/TR/css-style-attr/",
+                    category:"markup"
+                },
+                {
+                    name:"HTML Templates",
+                    uri:"http://www.w3.org/TR/html-templates/",
+                    category:"markup"
+                },
+                {
+                    name:"Scalable Vector Graphics (SVG) 1.1",
+                    uri:"http://www.w3.org/TR/SVG/single-page.html",
+                    category:"markup"
+                },
+                {
+                    name:"Mathematical Markup Language (MathML) Version 3.0",
+                    uri:"http://www.w3.org/TR/MathML/",
+                    category:"markup"
+                },
+                {
+                    name:"WebIDL",
+                    uri:"http://www.w3.org/TR/WebIDL/",
+                    category:"api"
+                },
+                {
+                    name:"Web Workers",
+                    uri:"http://www.w3.org/TR/workers/",
+                    category:"api"
+                },
+                {
+                    name:"Server-Sent Events",
+                    uri:"http://www.w3.org/TR/eventsource/",
+                    category:"api"
+                },
+                {
+                    name:"The WebSocket API",
+                    uri:"http://www.w3.org/TR/websockets/",
+                    category:"api"
+                },
+                {
+                    name:"HTML5 Web Messaging",
+                    uri:"http://www.w3.org/TR/webmessaging/",
+                    category:"api"
+                },
+                {
+                    name:"DOM4",
+                    uri:"http://www.w3.org/TR/dom/",
+                    category:"api"
+                },
+                {
+                    name:"CSSOM",
+                    uri:"http://www.w3.org/TR/cssom/",
+                    category:"api"
+                },
+                {
+                    name:"CSSOM View Module",
+                    uri:"http://www.w3.org/TR/cssom-view/",
+                    category:"api"
+                },
+                {
+                    name:"XMLHttpRequest Level 2",
+                    uri:"http://www.w3.org/TR/XMLHttpRequest2/",
+                    category:"api"
+                },
+                {
+                    name:"XMLHttpRequest",
+                    uri:"http://www.w3.org/TR/XMLHttpRequest/",
+                    category:"api"
+                },
+                {
+                    name:"Element Traversal",
+                    uri:"http://www.w3.org/TR/ElementTraversal/",
+                    category:"api"
+                },
+                {
+                    name:"HTML Canvas 2D Context, Level 2",
+                    uri:"http://www.w3.org/TR/2dcontext2/",
+                    category:"api"
+                },
+                {
+                    name:"HTML Canvas 2D Context",
+                    uri:"http://www.w3.org/TR/2dcontext/",
+                    category:"api"
+                },
+                {
+                    name:"Web Storage",
+                    uri:"http://www.w3.org/TR/webstorage/"
+                },
+                {
+                    name:"Web Audio API",
+                    uri:"http://www.w3.org/TR/webaudio/",
+                    category:"api"
+                },
+                {
+                    name:"Indexed Database API",
+                    uri:"http://www.w3.org/TR/IndexedDB/",
+                    category:"api"
+                },
+                {
+                    name:"WebRTC 1.0: Real-time Communication Between Browsers",
+                    uri:"http://www.w3.org/TR/webrtc/",
+                    category:"api"
+                },
+                {
+                    name:"Clipboard API and events",
+                    uri:"http://www.w3.org/TR/clipboard-apis/",
+                    category:"api"
+                },
+                {
+                    name:"Resource Timing",
+                    uri:"http://www.w3.org/TR/resource-timing/",
+                    category:"api"
+                },
+                {
+                    name:"Web Notifications",
+                    uri:"http://www.w3.org/TR/notifications/",
+                    category:"api"
+                },
+
+                {
+                    name:"Selectors API",
+                    uri:"http://www.w3.org/TR/selectors-api/",
+                    category:"api"
+                },
+                {
+                    name:"Selectors API Level 2",
+                    uri:"http://www.w3.org/TR/selectors-api2/",
+                    category:"api"
+                },
+                {
+                    name:"File API",
+                    uri:"http://www.w3.org/TR/FileAPI/",
+                    category:"api"
+                },
+                {
+                    name:"File API: Directories and System",
+                    uri:"http://www.w3.org/TR/file-system-api/",
+                    category:"api"
+                },
+                {
+                    name:"File API: Writer",
+                    uri:"http://www.w3.org/TR/file-writer-api/",
+                    category:"api"
+                },
+                {
+                    name:"Web Animations 1.0",
+                    uri:"http://www.w3.org/TR/web-animations/",
+                    category:"api"
+                },
+                {
+                    name:"Selectors Level 3",
+                    uri:"http://www.w3.org/TR/selectors/",
+                    category:"css-core"
+                },
+                {
+                    name:"Selectors Level 4",
+                    uri:"http://www.w3.org/TR/selectors4/",
+                    category:"css-core"
+                },
+                {
+                    name:"Media Queries",
+                    uri:"http://www.w3.org/TR/css3-mediaqueries/",
+                    category:"css-core"
+                },
+                {
+                    name:"CSS Cascading and Inheritance Level 3",
+                    uri:"http://www.w3.org/TR/css3-cascade",
+                    category:"css-core"
+                },
+                {
+                    name:"CSS3 module: Syntax",
+                    uri:"http://www.w3.org/TR/css3-syntax",
+                    category:"css-core"
+                },
+
+                {
+                    name:"CSS Animations",
+                    uri:"http://www.w3.org/TR/css3-animations",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Device Adaptation",
+                    uri:"http://www.w3.org/TR/css-device-adapt/",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Namespaces Module",
+                    uri:"http://www.w3.org/TR/css3-namespace/",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Color Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-color",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Values and Units Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-values",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Conditional Rules Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-conditional",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Flexible Box Layout Module",
+                    uri:"http://www.w3.org/TR/css3-flexbox",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Backgrounds and Borders Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-background",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Image Values and Replaced Content Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-images",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Image Values and Replaced Content Module Level 4",
+                    uri:"http://www.w3.org/TR/css4-images/",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Speech Module",
+                    uri:"http://www.w3.org/TR/css3-speech",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Multi-column Layout Module",
+                    uri:"http://www.w3.org/TR/css3-multicol",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Marquee Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-marquee",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Text Decoration Module Level 3",
+                    uri:"http://www.w3.org/TR/css-text-decor-3/",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Basic User Interface Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-ui/",
+                    category:"css-property"
+                },
+                {
+                    name:"Compositing and Blending Level 1",
+                    uri:"http://www.w3.org/TR/compositing-1/",
+                    category:"css-property"
+                },
+
+                {
+                    name:"CSS Masking Level 1",
+                    uri:"http://www.w3.org/TR/css-masking/",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Exclusions Module Level 1",
+                    uri:"http://www.w3.org/TR/css3-exclusions",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Regions Module Level 1",
+                    uri:"http://www.w3.org/TR/css3-regions",
+                    category:"css-property"
+                },
+                {
+                    name:"Filter Effects 1.0",
+                    uri:"http://www.w3.org/TR/filter-effects/",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Box Alignment Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-align",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Overflow Module Level 3",
+                    uri:"http://www.w3.org/TR/css-overflow-3/",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Grid Layout",
+                    uri:"http://www.w3.org/TR/css3-grid-layout",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Paged Media Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-page",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Counter Styles Level 3",
+                    uri:"http://www.w3.org/TR/css-counter-styles-3/",
+                    category:"css-property"
+                },
+
+                {
+                    name:"CSS Fonts Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-fonts",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Transitions",
+                    uri:"http://www.w3.org/TR/css3-transitions",
+                    category:"css-property"
+                },
+
+                {
+                    name:"CSS Writing Modes Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-writing-modes",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Text Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-text",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Intrinsic & Extrinsic Sizing Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-sizing",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Transforms",
+                    uri:"http://www.w3.org/TR/css3-transforms",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Fragmentation Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-break",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Grid Positioning Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-positioning",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS 2D Transforms",
+                    uri:"http://www.w3.org/TR/css3-2d-transforms",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Template Layout Module",
+                    uri:"http://www.w3.org/TR/css3-layout",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Generated Content for Paged Media Module",
+                    uri:"http://www.w3.org/TR/css3-gcpm",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS3 Ruby Module",
+                    uri:"http://www.w3.org/TR/css3-ruby",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Lists and Counters Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-lists",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS 3D Transforms Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-3d-transforms",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS Grid Positioning Module Level 3",
+                    uri:"http://www.w3.org/TR/css3-grid",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS basic box model",
+                    uri:"http://www.w3.org/TR/css3-box",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS3 Hyperlink Presentation Module",
+                    uri:"http://www.w3.org/TR/css3-hyperlinks",
+                    category:"css-property"
+                },
+                {
+                    name:"The CSS 'Reader' Media Type",
+                    uri:"http://www.w3.org/TR/css3-reader",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS3 module: Presentation Levels",
+                    uri:"http://www.w3.org/TR/css3-preslev",
+                    category:"css-property"
+                },
+
+                {
+                    name:"CSS3 Generated and Replaced Content Module",
+                    uri:"http://www.w3.org/TR/css3-content",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS3 module: Border",
+                    uri:"http://www.w3.org/TR/css3-border",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS3 module: line",
+                    uri:"http://www.w3.org/TR/css3-linebox",
+                    category:"css-property"
+                },
+                {
+                    name:"CSS3 module: Web Fonts",
+                    uri:"http://www.w3.org/TR/css3-webfonts",
+                    category:"css-core"
+                },
+                {
+                    name:"CSS3 introduction",
+                    uri:"http://www.w3.org/TR/css3-roadmap",
+                    category:"css-property"
+                }
+
+            ];
+            var liTemp = '<li><a href="" target="_blank"></a></li>';
+            var len = standard.length,result = '',standards = standard.sort(),ul = document.querySelector('.standar');
+            for (var i = 0;i < len;i++) {
+                result += '<li><a href="'+standards[i].uri+'" target="_blank">'+standards[i].name+'</a></li>';
+            }
+            ul.innerHTML=result;
+
+            // 中文翻译版本
+            var standardZh = [
+                {
+                    name:"W3C 规范翻译列表",
+                    uri:"https://www.w3.org/html/ig/zh/wiki/%E7%BF%BB%E8%AF%91",
+                    category:"markup"
+                },
+                {
+                    name:"ES5 中文版",
+                    uri:"http://yanhaijing.com/es5/#about",
+                    category:"markup"
+                },
+                {
+                    name:"W3help 兼容性",
+                    uri:"http://www.w3help.org/zh-cn/home/compatibility.html",
+                    category:"markup"
+                },
+                {
+                    name:"ES6 入门",
+                    uri:"http://es6.ruanyifeng.com/",
+                    category:"markup"
+                }
+            ];
+            var liTemp = '<li><a href="" target="_blank"></a></li>';
+            var _len = standardZh.length,_result = '',standardZhs = standardZh.sort(),_ul = document.querySelector('.standar-zh');
+            for (var i = 0;i < _len;i++) {
+                _result += '<li><a href="'+standardZhs[i].uri+'" target="_blank">'+standardZhs[i].name+'</a></li>';
+            }
+            _ul.innerHTML=_result;
+
+        }
+
+    </script>
+</body>
+</html>
