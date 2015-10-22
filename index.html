@@ -39,7 +39,7 @@
             </ul>
         </section>
         <section>
-            <h2>W3C 规范中文版及规范相关</h2>
+            <h2>W3C 规范中文版及相关文档</h2>
             <ul class="standar-zh">
             </ul>
         </section>
@@ -500,13 +500,49 @@
                     category:"markup"
                 },
                 {
-                    name:"ES5 中文版",
-                    uri:"http://yanhaijing.com/es5/#about",
+                    name:"带前缀的 css 属性",
+                    uri:"http://peter.sh/experiments/vendor-prefixed-css-property-overview/",
                     category:"markup"
                 },
                 {
+                    name:"带 -webkit 前缀的 css 属性",
+                    uri:"https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Webkit_Extensions",
+                    category:"markup"
+                },
+                {
+                    name:"带 -moz 前缀的 css 属性",
+                    uri:"https://developer.mozilla.org/en-US/docs/Web/CSS/Mozilla_Extensions",
+                    category:"markup"
+                },
+                {
+                    name:"HTML 元素标签参考",
+                    uri:"https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element",
+                    category:"markup"
+                },
+                {
+                    name:"HTML 属性参考",
+                    uri:"https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes",
+                    category:"markup"
+                },
+
+                {
                     name:"W3help 兼容性",
                     uri:"http://www.w3help.org/zh-cn/home/compatibility.html",
+                    category:"markup"
+                },
+                {
+                    name:"Web API 参考",
+                    uri:"https://developer.mozilla.org/zh-CN/docs/Web/Reference/API",
+                    category:"markup"
+                },
+                {
+                    name:"事件类型一览表",
+                    uri:"https://developer.mozilla.org/zh-CN/docs/Web/Events",
+                    category:"markup"
+                },
+                {
+                    name:"ES5 中文版",
+                    uri:"http://yanhaijing.com/es5/#about",
                     category:"markup"
                 },
                 {
@@ -514,6 +550,7 @@
                     uri:"http://es6.ruanyifeng.com/",
                     category:"markup"
                 }
+
             ];
             var liTemp = '<li><a href="" target="_blank"></a></li>';
             var _len = standardZh.length,_result = '',standardZhs = standardZh.sort(),_ul = document.querySelector('.standar-zh');
