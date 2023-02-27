@@ -1,5 +1,5 @@
 # web-standard
 web-standard
 
-http://dyygtfx.github.io/web-standard.
+https://go7hic.github.io/web-standard/
 
